@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="12" failures="0" errors="0" time="0.723">
-  <testsuite name="GET /health" errors="0" failures="0" skipped="0" timestamp="2026-04-15T20:33:59" time="0.63" tests="12">
-    <testcase classname="GET /health returns ok status" name="GET /health returns ok status" time="0.009">
+<testsuites name="jest tests" tests="14" failures="0" errors="0" time="3.041">
+  <testsuite name="async task fetch" errors="0" failures="0" skipped="0" timestamp="2026-04-15T21:50:01" time="2.246" tests="1">
+    <testcase classname="async task fetch fetches task data asynchronously" name="async task fetch fetches task data asynchronously" time="0.085">
     </testcase>
-    <testcase classname="POST /tasks creates a task with valid input" name="POST /tasks creates a task with valid input" time="0.005">
+  </testsuite>
+  <testsuite name="GET /health" errors="0" failures="0" skipped="0" timestamp="2026-04-15T21:50:01" time="2.548" tests="13">
+    <testcase classname="GET /health returns ok status" name="GET /health returns ok status" time="0.022">
     </testcase>
-    <testcase classname="POST /tasks returns 400 when title is missing" name="POST /tasks returns 400 when title is missing" time="0.002">
+    <testcase classname="POST /tasks creates a task with valid input" name="POST /tasks creates a task with valid input" time="0.01">
     </testcase>
-    <testcase classname="POST /tasks returns 400 when title is empty" name="POST /tasks returns 400 when title is empty" time="0.001">
+    <testcase classname="POST /tasks returns 400 when title is missing" name="POST /tasks returns 400 when title is missing" time="0.003">
     </testcase>
-    <testcase classname="GET /tasks returns empty list when no tasks exist" name="GET /tasks returns empty list when no tasks exist" time="0.001">
+    <testcase classname="POST /tasks returns 400 when title is empty" name="POST /tasks returns 400 when title is empty" time="0.003">
     </testcase>
-    <testcase classname="GET /tasks returns all tasks" name="GET /tasks returns all tasks" time="0.002">
+    <testcase classname="GET /tasks returns empty list when no tasks exist" name="GET /tasks returns empty list when no tasks exist" time="0.003">
     </testcase>
-    <testcase classname="GET /tasks/:id returns a task by id" name="GET /tasks/:id returns a task by id" time="0.003">
+    <testcase classname="GET /tasks returns all tasks" name="GET /tasks returns all tasks" time="0.005">
     </testcase>
-    <testcase classname="GET /tasks/:id returns 404 for non-existent task" name="GET /tasks/:id returns 404 for non-existent task" time="0.001">
+    <testcase classname="GET /tasks/:id returns a task by id" name="GET /tasks/:id returns a task by id" time="0.005">
     </testcase>
-    <testcase classname="PUT /tasks/:id updates a task" name="PUT /tasks/:id updates a task" time="0.001">
+    <testcase classname="GET /tasks/:id returns 404 for non-existent task" name="GET /tasks/:id returns 404 for non-existent task" time="0.002">
+    </testcase>
+    <testcase classname="PUT /tasks/:id updates a task" name="PUT /tasks/:id updates a task" time="0.003">
+    </testcase>
+    <testcase classname="PUT /tasks/:id returns 400 when updating title to empty string" name="PUT /tasks/:id returns 400 when updating title to empty string" time="0.003">
     </testcase>
     <testcase classname="PUT /tasks/:id returns 404 for non-existent task" name="PUT /tasks/:id returns 404 for non-existent task" time="0.001">
     </testcase>
-    <testcase classname="DELETE /tasks/:id deletes a task" name="DELETE /tasks/:id deletes a task" time="0.003">
+    <testcase classname="DELETE /tasks/:id deletes a task" name="DELETE /tasks/:id deletes a task" time="0.004">
     </testcase>
-    <testcase classname="DELETE /tasks/:id returns 404 for non-existent task" name="DELETE /tasks/:id returns 404 for non-existent task" time="0">
+    <testcase classname="DELETE /tasks/:id returns 404 for non-existent task" name="DELETE /tasks/:id returns 404 for non-existent task" time="0.002">
     </testcase>
   </testsuite>
 </testsuites>
