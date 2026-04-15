@@ -91,6 +91,19 @@ describe('PUT /tasks/:id', () => {
     expect(res.body.task.status).toBe('done');
   });
 
+  it('returns 400 when updating title to empty string', async () => {
+    const created = await request(app)
+      .post('/tasks')
+      .send({ title: 'Original' });
+
+    const res = await request(app)
+      .put(`/tasks/${created.body.task.id}`)
+      .send({ title: '   ' });
+
+    expect(res.status).toBe(400);
+    expect(res.body.error).toBe('Title is required');
+  });
+
   it('returns 404 for non-existent task', async () => {
     const res = await request(app)
       .put('/tasks/nonexistent')
