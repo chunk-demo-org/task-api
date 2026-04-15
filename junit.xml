@@ -1,29 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="12" failures="0" errors="0" time="0.723">
-  <testsuite name="GET /health" errors="0" failures="0" skipped="0" timestamp="2026-04-15T20:33:59" time="0.63" tests="12">
-    <testcase classname="GET /health returns ok status" name="GET /health returns ok status" time="0.009">
+<testsuites name="jest tests" tests="30" failures="0" errors="0" time="2.455">
+  <testsuite name="async task fetch" errors="0" failures="0" skipped="0" timestamp="2026-04-15T21:53:02" time="1.619" tests="1">
+    <testcase classname="async task fetch fetches task data asynchronously" name="async task fetch fetches task data asynchronously" time="0.105">
     </testcase>
-    <testcase classname="POST /tasks creates a task with valid input" name="POST /tasks creates a task with valid input" time="0.005">
+  </testsuite>
+  <testsuite name="GET /health" errors="0" failures="0" skipped="0" timestamp="2026-04-15T21:53:02" time="1.93" tests="29">
+    <testcase classname="GET /health returns ok status" name="GET /health returns ok status" time="0.019">
+    </testcase>
+    <testcase classname="POST /tasks creates a task with valid input" name="POST /tasks creates a task with valid input" time="0.012">
+    </testcase>
+    <testcase classname="POST /tasks creates a task with minimum valid input" name="POST /tasks creates a task with minimum valid input" time="0.004">
+    </testcase>
+    <testcase classname="POST /tasks creates a task with all valid priorities" name="POST /tasks creates a task with all valid priorities" time="0.007">
+    </testcase>
+    <testcase classname="POST /tasks trims whitespace from title" name="POST /tasks trims whitespace from title" time="0.002">
     </testcase>
     <testcase classname="POST /tasks returns 400 when title is missing" name="POST /tasks returns 400 when title is missing" time="0.002">
     </testcase>
-    <testcase classname="POST /tasks returns 400 when title is empty" name="POST /tasks returns 400 when title is empty" time="0.001">
+    <testcase classname="POST /tasks returns 400 when title is empty" name="POST /tasks returns 400 when title is empty" time="0.003">
     </testcase>
-    <testcase classname="GET /tasks returns empty list when no tasks exist" name="GET /tasks returns empty list when no tasks exist" time="0.001">
+    <testcase classname="POST /tasks returns 400 when title is not a string" name="POST /tasks returns 400 when title is not a string" time="0.003">
     </testcase>
-    <testcase classname="GET /tasks returns all tasks" name="GET /tasks returns all tasks" time="0.002">
+    <testcase classname="POST /tasks returns 400 when title exceeds 200 characters" name="POST /tasks returns 400 when title exceeds 200 characters" time="0.002">
+    </testcase>
+    <testcase classname="POST /tasks accepts title with exactly 200 characters" name="POST /tasks accepts title with exactly 200 characters" time="0.002">
+    </testcase>
+    <testcase classname="POST /tasks returns 400 when priority is invalid" name="POST /tasks returns 400 when priority is invalid" time="0.002">
+    </testcase>
+    <testcase classname="GET /tasks returns empty list when no tasks exist" name="GET /tasks returns empty list when no tasks exist" time="0.002">
+    </testcase>
+    <testcase classname="GET /tasks returns all tasks" name="GET /tasks returns all tasks" time="0.004">
     </testcase>
     <testcase classname="GET /tasks/:id returns a task by id" name="GET /tasks/:id returns a task by id" time="0.003">
     </testcase>
     <testcase classname="GET /tasks/:id returns 404 for non-existent task" name="GET /tasks/:id returns 404 for non-existent task" time="0.001">
     </testcase>
-    <testcase classname="PUT /tasks/:id updates a task" name="PUT /tasks/:id updates a task" time="0.001">
+    <testcase classname="PUT /tasks/:id updates a task" name="PUT /tasks/:id updates a task" time="0.004">
     </testcase>
-    <testcase classname="PUT /tasks/:id returns 404 for non-existent task" name="PUT /tasks/:id returns 404 for non-existent task" time="0.001">
+    <testcase classname="PUT /tasks/:id updates only status without changing title" name="PUT /tasks/:id updates only status without changing title" time="0.005">
     </testcase>
-    <testcase classname="DELETE /tasks/:id deletes a task" name="DELETE /tasks/:id deletes a task" time="0.003">
+    <testcase classname="PUT /tasks/:id updates all valid status values" name="PUT /tasks/:id updates all valid status values" time="0.005">
     </testcase>
-    <testcase classname="DELETE /tasks/:id returns 404 for non-existent task" name="DELETE /tasks/:id returns 404 for non-existent task" time="0">
+    <testcase classname="PUT /tasks/:id updates priority" name="PUT /tasks/:id updates priority" time="0.002">
+    </testcase>
+    <testcase classname="PUT /tasks/:id trims whitespace from updated title" name="PUT /tasks/:id trims whitespace from updated title" time="0.003">
+    </testcase>
+    <testcase classname="PUT /tasks/:id returns 400 when title is empty" name="PUT /tasks/:id returns 400 when title is empty" time="0.003">
+    </testcase>
+    <testcase classname="PUT /tasks/:id returns 400 when title is not a string" name="PUT /tasks/:id returns 400 when title is not a string" time="0.003">
+    </testcase>
+    <testcase classname="PUT /tasks/:id returns 400 when title exceeds 200 characters" name="PUT /tasks/:id returns 400 when title exceeds 200 characters" time="0.003">
+    </testcase>
+    <testcase classname="PUT /tasks/:id accepts title with exactly 200 characters" name="PUT /tasks/:id accepts title with exactly 200 characters" time="0.003">
+    </testcase>
+    <testcase classname="PUT /tasks/:id returns 400 when status is invalid" name="PUT /tasks/:id returns 400 when status is invalid" time="0.002">
+    </testcase>
+    <testcase classname="PUT /tasks/:id returns 400 when priority is invalid" name="PUT /tasks/:id returns 400 when priority is invalid" time="0.002">
+    </testcase>
+    <testcase classname="PUT /tasks/:id returns 404 for non-existent task" name="PUT /tasks/:id returns 404 for non-existent task" time="0.002">
+    </testcase>
+    <testcase classname="DELETE /tasks/:id deletes a task" name="DELETE /tasks/:id deletes a task" time="0.004">
+    </testcase>
+    <testcase classname="DELETE /tasks/:id returns 404 for non-existent task" name="DELETE /tasks/:id returns 404 for non-existent task" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>
