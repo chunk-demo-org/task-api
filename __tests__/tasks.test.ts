@@ -38,7 +38,7 @@ describe('POST /tasks', () => {
   it('returns 400 when title is empty', async () => {
     const res = await request(app).post('/tasks').send({ title: '  ' });
     expect(res.status).toBe(400);
-    expect(res.body.error).toBe('Title is required');
+    expect(res.body.error).toBe('Title cannot be empty');
   });
 });
 
