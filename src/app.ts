@@ -1,5 +1,6 @@
 import express from 'express';
 import taskRoutes from './routes/tasks';
+import searchRoutes from './routes/search';
 
 const app = express();
 
@@ -10,5 +11,6 @@ app.get('/health', (_req, res) => {
 });
 
 app.use('/tasks', taskRoutes);
+app.use('/search', searchRoutes);
 
 export default app;
